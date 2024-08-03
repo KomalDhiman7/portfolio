@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: rgb(253, 211, 218);
+            color: rgb(97, 3, 97);
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            background-color: rgb(97, 3, 97);
+            color: pink;
+            height: 50px;
+            align-items: center;
+            padding-right: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header a {
+            color: pink;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #names {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 500px;
+            text-align: left;
+            padding: 0 20px;
+            margin-left: 100px;
+            font-size: 50px;
+        }
+        p {
+            font-size: 25px;
+        }
+        .content {
+            flex: 1;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin: 10px;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+        .pp {
+            margin-right: 100px;
+            flex: 0 0 auto;
+            padding-left: 20px;
+        }
+        .pp img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        #skills li {
+            display: inline-block;
+            margin: 10px;
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .project {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 300px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            margin: 10px 0 5px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin: 5px 0 20px;
+            width: 80%;
+            max-width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input#name {
+            max-width: 300px; 
+        }
+        form button {
+            padding: 10px 20px;
+            border: none;
+            background: purple;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: pink;
+            color: purple;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+    <title>Komal's Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#contact">Contact Me</a>
+    </header>
+    <section id="names">
+        <div class="content">
+            <h1>Hi, I'm Komal</h1>
+            <p>Front-End Developer | Python Developer</p>
+            <div class="social-links">
+                <a href="mailto:komaldhiman773@gmail.com"><img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Email"></a>
+                <a href="https://github.com/KomalDhiman7"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU=s48-rw" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/komal-dhiman-580935289?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BotAB6Ls2T%2F2Ll02lyvY%2FXA%3D%3D"><img src="https://yt3.googleusercontent.com/9XmuxL_LL7CxAOOlbBgTnJIo2uHpoLKHhWzlPt7O49ULQmvBSJlxk1RpX3pJ8jkRBkD6p9BIRg=s160-c-k-c0x00ffffff-no-rj" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="pp">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQHCjUMXa0Dl9Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1704639391306?e=1727913600&v=beta&t=VFL0Z1TSo9ArpYLlB9xWzj_XShU1DOW_xuUvXtiFbsA" alt="Komal">
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A Front-End Web Developer with a passion for creating beautiful websites.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>To-Do List</h3>
+                <p>A simple to-do list application to manage tasks.</p>
+            </div>
+            <div class="project">
+                <h3>Weather App</h3>
+                <p>An application that provides current weather information.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Komal. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        
+        emailjs.init('ElVrTPvrkGr1YwPcU'); 
+        function sendEmail(event) {
+            event.preventDefault(); 
+
+            emailjs.sendForm('service_45dzk0s', 'template_8zazw9r', '#contact-form')
+                .then((response) => {
+                    alert('Message sent successfully');
+                }, (error) => {
+                    alert('Failed to send message. Error: ' + JSON.stringify(error));
+                });
+        }
+    </script>
+</body>
+</html>
